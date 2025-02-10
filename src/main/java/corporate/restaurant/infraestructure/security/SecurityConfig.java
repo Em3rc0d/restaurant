@@ -14,8 +14,8 @@ public class SecurityConfig {
         http
                 .csrf().disable()
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/reservas/**").authenticated()
-                        .anyRequest().permitAll()
+                        .requestMatchers("/api/reservas/**").permitAll()  // Permite el acceso sin autenticación
+                        .anyRequest().authenticated()  // El resto de las rutas requieren autenticación
                 )
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         return http.build();
