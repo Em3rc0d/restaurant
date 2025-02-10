@@ -1,5 +1,7 @@
 package corporate.restaurant.domain;
 
+import org.springframework.data.annotation.Id;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,7 +12,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LocalPiso {
+    @Id
+    private String id;
     private Sede sede;
     private int numeroPiso;
     private int cantidadMesas;
+
+    public LocalPiso(String id){
+        this.id = id;
+    }
 }

@@ -1,5 +1,7 @@
 package corporate.restaurant.domain;
 
+import org.springframework.data.annotation.Id;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +12,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cliente extends Usuario {
+    @Id
+    private String id;
     private String correo;
     private Boolean esFrecuente;
+
+    public Cliente (String id){
+        this.id = id;
+    }
 }

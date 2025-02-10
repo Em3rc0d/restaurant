@@ -1,5 +1,7 @@
 package corporate.restaurant.domain;
 
+import org.springframework.data.annotation.Id;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +12,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Trabajador extends Usuario{
+    @Id
+    private String id;
     private String puesto;
     private float salario;
     private float horasTrabajadas;
