@@ -1,17 +1,18 @@
-package corporate.restaurant.domain;
+package corporate.restaurant.infraestructure.entity;
 
 import org.springframework.data.annotation.Id;
-
+import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-//Data es para que se generen los setter y getter de cada atributo
-//NoArgsContructor para crear el constructor vacío
-//AllArgsContructor para crear el constructor completo
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Usuario {
+@Document(collection = "usuarios")
+public class UsuarioEntity {
+    
+    @Id
     private String id;
     private String nombre;
     private String apellido;
