@@ -1,9 +1,7 @@
 package corporate.restaurant.infraestructure.persistence;
 
+import corporate.restaurant.infraestructure.entity.MesaEntity;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import corporate.restaurant.infraestructure.entity.ReservaEntity;
-
-public interface  MesaRepository extends MongoRepository<ReservaEntity, String> {
-
+public interface MesaRepository extends MongoRepository<MesaEntity, String> {
 }

@@ -19,4 +19,5 @@ public class TrabajadorEntity {
     private String id;
     private String puesto;
     private float salario;
+    private float horasTrabajadas;
 }
